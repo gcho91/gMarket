@@ -1,1 +1,1 @@
-angular.module('gMarket', []);
+angular.module('gMarket', ['ui.router', 'ui.bootstrap'])
