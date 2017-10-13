@@ -12,17 +12,33 @@ angular.module('gMarket', ['ui.router']).config(function($stateProvider, $urlRou
     controller: "shopCtrl"
   })
 
+  // .state('category', {
+  //   url: "/shop/:category,"
+  // control
+  // })
+
   .state('cart', {
     url: '/cart',
     templateUrl: 'views/cart.html',
-    controller: 'payCtrl'
+    controller: 'cartCtrl'
   })
 
   .state('checkout', {
-    url: "checkout",
+    url: "/checkout",
     templateUrl: "views/checkout.html",
-    controller: "payCtrl"
+    controller: "checkoutCtrl"
   })
+
+  .state('test', {
+    url: "/test",
+    templateUrl: "views/test.html",
+  
+  })
+
+
+
+  //diff ctrl, same states
+
 
   $urlRouterProvider.otherwise("/")
 })
