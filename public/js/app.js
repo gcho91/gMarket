@@ -32,7 +32,8 @@ angular.module('gMarket', ['ui.router']).config(function($stateProvider, $urlRou
   .state('test', {
     url: "/test",
     templateUrl: "views/test.html",
-  
+    controller: "checkoutCtrl"
+
   })
 
 

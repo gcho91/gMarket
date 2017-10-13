@@ -1,18 +1,25 @@
 const express = require('express');
-
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const massive = require('massive');
-
 const cookieParser = require('cookie-parser');
+
+//db stuff
+const connectionString = "postgres://gcho91@localhost/gcho91";
+//ctrl for server
+const ctrl = require('./server/ctrl.js')
+
+
+const massiveConnection = massive(connectionString)
+.then( dbInstance =>
+  app.set('db', dbInstance ) );
+
+//end above db//
 
 const app = express();
 const port = 3000;
 
-
-
-
-
+const db = app.get("db");
 
 
 app.use(express.static(__dirname + "/public"));
@@ -31,11 +38,23 @@ app.use(session({
 
 }))
 
-// app.get('/test', function (req, res) {
-//   res.send('hi there');
-// });
+////////////////////////////////////////////
+
+//endpts
+
+//in server ctrl
+app.get('/api/products', ctrl.getProducts)
 
 
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////
 
 
 //something showed up//////////////////////////
@@ -46,13 +65,14 @@ app.get('/test', function(req, res){
    } else {
       req.session.page_views = 1;
       res.send("Welcome to this page for the first time!");
+      // res.send(req.sessionID);
       console.log("sessionID: ", req.sessionID);
    }
 });
 
-app.get('/test2', function(req, res, next) {
+app.get('/test3', function(req, res, next) {
   console.log(req.sessionID);
-  res.send(req.sessionID);
+  // res.send(req.sessionID);
 })
 
 
