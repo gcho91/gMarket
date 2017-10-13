@@ -1,1 +1,22 @@
 <h1>Show all products here</h1>
+
+<!-- {{ test }} <br> -->
+
+
+<div ng-repeat="product in products">
+
+  <h4> {{ product.name }}</h4> <br />
+  <h4> $ {{ product.price }}</h4> <br />
+  <h4> {{ product.prodtype }}</h4>
+  <img ng-src=" {{ product.imageurl1 }}" width="500px">
+
+
+  <hr>
+</div>
+
+
+
+
+
+
+<!-- {{ products }} -->
