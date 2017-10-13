@@ -14,8 +14,6 @@ angular.module('gMarket').service('shopService', function($http){
     })
   };
 
-
-
   //men
   this.getMenProducts = function(){
     return $http({
@@ -41,3 +39,16 @@ angular.module('gMarket').service('shopService', function($http){
   };
 
 });
+
+/*
+  this.getProductsByType = function (type){
+  return $http({
+    method: "GET",
+    url: `http://localhost:3000/api/products?type=`+ type
+  }).then(function(response) {
+    console.log(response.data);
+    var results = response.data;
+    return results;
+  })
+}
+*/

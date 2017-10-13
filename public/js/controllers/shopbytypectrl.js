@@ -7,10 +7,14 @@ if ($stateParams.type === "men") {
     $scope.products = results;
   });
 }
+
 if ($stateParams.type === "women") {
   shopService.getWomenProducts().then(results => {
     $scope.products = results;
   });
 }
-
 })
+/*
+shopService.getProductsByType($stateParams.type)
+
+*/
