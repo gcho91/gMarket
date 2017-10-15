@@ -4,3 +4,4 @@ angular.module('gMarket').service('service', function($http) {
   };
 
 });
+ 

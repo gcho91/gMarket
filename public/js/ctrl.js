@@ -3,3 +3,4 @@ angular.module('gMarket').controller('ctrl', function($scope, service) {
     $scope.products = products
   })
 })
+ 

@@ -15,7 +15,7 @@ if ($stateParams.type === "women") {
 }
 })
 */
-
+ 
 
 if ($stateParams.type) {
   shopService.getProductsByType($stateParams.type).then(results => {

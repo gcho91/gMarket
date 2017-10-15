@@ -13,7 +13,7 @@ angular.module('gMarket').service('shopService', function($http){
       return results;
     })
   };
-
+ 
   //men
   // this.getMenProducts = function(){
   //   return $http({

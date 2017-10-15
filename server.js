@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const massive = require('massive');
 const cookieParser = require('cookie-parser');
-
+ 
 //db stuff
 const connectionString = "postgres://gcho91@localhost/gcho91";
 //ctrl for server

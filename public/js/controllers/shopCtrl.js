@@ -8,3 +8,4 @@ shopService.getProducts().then(function(response) {
 })
 
 })
+ 
