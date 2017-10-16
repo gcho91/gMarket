@@ -13,7 +13,30 @@ angular.module('gMarket').service('shopService', function($http){
       return results;
     })
   };
- 
+
+
+  this.getProductsByType = function (type){
+    return $http({
+      method: "GET",
+      url: `http://localhost:3000/api/products?type=`+ type
+    }).then(function(response) {
+      // console.log(response.data);
+      var results = response.data;
+      return results;
+    })
+  }
+
+  this.getProductById = function(id) {
+    return $http({
+      method: "GET",
+      url: `http://localhost:3000/api/products/` + id
+    }).then(function(response) {
+      console.log(response.data);
+      var results = response.data;
+      return results;
+    })
+  }
+
   //men
   // this.getMenProducts = function(){
   //   return $http({
@@ -37,18 +60,5 @@ angular.module('gMarket').service('shopService', function($http){
   //     return results;
   //   })
   // };
-
-
-  this.getProductsByType = function (type){
-    return $http({
-      method: "GET",
-      url: `http://localhost:3000/api/products?type=`+ type
-    }).then(function(response) {
-      console.log(response.data);
-      var results = response.data;
-      return results;
-    })
-  }
-
 
 });

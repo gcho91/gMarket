@@ -17,6 +17,13 @@ angular.module('gMarket', ['ui.router']).config(function($stateProvider, $urlRou
     templateUrl: "views/shopbytype.html",
     controller: "shopbytypeCtrl"
   })
+  //show product details by id
+  .state('details', {
+    url: '/details/:id',
+    // url: '/shop/:id',
+    templateUrl: "views/details.html",
+    controller: "detailsCtrl"
+  })
 
   .state('cart', {
     url: '/cart',
