@@ -1,6 +1,6 @@
 <h1>Shop by type:</h1>
 
-<div ng-repeat="product in products">
+<!-- <div ng-repeat="product in products">
 
 
   <img ng-src="{{ product.imageurl1 }}" width="500px">
@@ -9,5 +9,15 @@
 
 
   <hr />
+</div> -->
+<!-- {{ test }} -->
+
+
+<div ng-repeat="product in products" ui-sref="details({ id: product.productid })">
+
+
+  <img ng-src=" {{ product.imageurl1 }}" width="500px">
+  <h4>{{product.name}}</h4> <br />
+  <h4> ${{product.price}} </h4> <br />
+  <hr />
 </div>
-{{ test }}
