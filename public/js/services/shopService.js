@@ -37,6 +37,16 @@ angular.module('gMarket').service('shopService', function($http){
     })
   }
 
+  // this.getSessionID = function() {
+  //   return $http.get("/test3")
+  //   console.log(sessionID, "getSessionServce")
+  // }
+
+  this.addToCart = function( product, sessionID ){
+    console.log( product, "from shopService")
+    return $http.post('/post', product, sessionID );
+  }
+
   //men
   // this.getMenProducts = function(){
   //   return $http({

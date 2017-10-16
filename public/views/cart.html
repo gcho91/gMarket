@@ -1,1 +1,28 @@
 <h1>Shopping cart here</h1>
+
+
+<table class="table table-hover">
+  <tr>
+    <th></th>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Price</th>
+  </tr>
+
+  <tr ng-repeat="item in items">
+    <td><img ng-src="{{item.image}}" width="100" height="100">
+      <!-- <p><a ng-click="deleteItem(item.id)" class="btn btn-sm btn-danger" role="button">Remove Item</a></p> -->
+    </td>
+    <td>{{item.name}}</td>
+    <td>
+      1
+    </td>
+    <td>{{item.price | currency}} </td>
+  </tr>
+</table>
+
+
+<div class="bottom-total">
+  <h3 class="total"><strong> Total: {{totalPrice | currency}}</strong></h3>
+  <button href="#" class="btn btn-success btn-xs total-button" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"> Checkout</i></button>
+</div>

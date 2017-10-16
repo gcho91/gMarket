@@ -11,4 +11,19 @@ angular.module('gMarket').controller('detailsCtrl', function($scope, $stateParam
     //$scope.random/dtails just makes it available to the view???
 })
 
+$scope.addToCart = function(product, sessionID) {
+  console.log( product, "FROM SHOPCTRL")
+
+  shopService.addToCart( product, sessionID ).then(function(response) {
+    console.log(response);
+  })
+}
+
+// shopService.getSessionID().then(function(response) {
+//   console.log("sessionID: ", response.data);
+//   $scope.sessionID = response.data;
+//
+//
+// })
+
 });

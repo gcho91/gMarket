@@ -31,11 +31,8 @@ app.use(cookieParser());
 
 app.use(session({
   secret: 'some-random-string',
-  key: 'test',
   resave: true,
   saveUninitialized: true,
-  cookie: {secure: true}
-
 }))
 
 ////////////////////////////////////////////
@@ -45,7 +42,7 @@ app.use(session({
 //in server ctrl
 app.get('/api/products', ctrl.getProducts)
 app.get('/api/products/:id', ctrl.getProductById)
-
+app.post('/post', ctrl.addToCart)
 
 
 
@@ -69,13 +66,14 @@ app.get('/test', function(req, res){
       res.send("Welcome to this page for the first time!");
       // res.send(req.sessionID);
       console.log("sessionID: ", req.sessionID);
+      return ("sessionID: ", req.sessionID);
    }
 });
 
-app.get('/test3', function(req, res, next) {
-  console.log(req.sessionID);
-  // res.send(req.sessionID);
-})
+// app.get('/test3', function(req, res, next) {
+//   // console.log(req.sessionID);
+//   res.send(req.sessionID)
+// })
 
 
 
