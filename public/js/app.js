@@ -19,8 +19,9 @@ angular.module('gMarket', ['ui.router']).config(function($stateProvider, $urlRou
   })
   //show product details by id
   .state('details', {
-    url: '/details/:id',
-    // url: '/shop/:id',
+
+    // url: '/details/:id',
+    url: '/shop/:id',
     templateUrl: "views/details.html",
     controller: "detailsCtrl"
   })
