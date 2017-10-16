@@ -35,12 +35,32 @@ module.exports = {
 
   //post do db
   addToCart: (req, res, next) => {
-    const dbInstance = req.app.get('db');
-    // console.log(req.body, "FROM CTRLJS")
-    console.log(req.sessionID, "SESSION: ")
 
-    dbInstance.addToCart([req.body.productid, req.sessionID])
-    .then(response => res.status("200").json(response));
+    const dbInstance = req.app.get('db');
+
+    // console.log(req.body, "FROM CTRLJS")
+
+    console.log("SESSION: ", req.sessionID )
+
+    dbInstance.run('SELECT * FROM cart WHERE sessionid = $1 AND productid=$2', [req.sessionID, req.body.productid ]).then(function(response) {
+      console.log(response);
+
+        if (response.length === 0) {
+          //add to cart
+          dbInstance.addToCart([req.body.productid, req.sessionID])
+          .then(response => res.status("200").json(response));
+        }
+
+        else {
+          //update quantity
+          // dbInstance.run('UPDATE cart SET (quantity = quantity + 1) WHERE sessionid = $1 AND productid = $2')
+          dbInstance.run('UPDATE cart SET quantity = quantity + 1 WHERE sessionid = $1 AND productid = $2', [req.sessionID, req.body.productid ])
+        }
+
+      // dbInstance.addToCart([req.body.productid, req.sessionID])
+      // .then(response => res.status("200").json(response));
+    })
+
   }
 
 

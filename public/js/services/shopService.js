@@ -42,33 +42,15 @@ angular.module('gMarket').service('shopService', function($http){
   //   console.log(sessionID, "getSessionServce")
   // }
 
-  this.addToCart = function( product, sessionID ){
+
+
+
+  this.addToCart = function( product){
     console.log( product, "from shopService")
-    return $http.post('/post', product, sessionID );
+    return $http.post('/post', product );
   }
 
-  //men
-  // this.getMenProducts = function(){
-  //   return $http({
-  //     method: "GET",
-  //     url: `http://localhost:3000/api/products?type=men`
-  //   }).then(function(response) {
-  //     console.log(response.data);
-  //     var results = response.data;
-  //     return results;
-  //   })
-  // };
 
-  //women
-  // this.getWomenProducts = function(){
-  //   return $http({
-  //     method: "GET",
-  //     url: `http://localhost:3000/api/products?type=women`
-  //   }).then(function(response) {
-  //     console.log(response.data);
-  //     var results = response.data;
-  //     return results;
-  //   })
-  // };
+
 
 });
