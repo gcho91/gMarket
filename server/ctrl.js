@@ -76,6 +76,16 @@ module.exports = {
     .catch(response => res.status('400'));
 
     //get all cart items first regardless of sessionid
+  },
+
+  getCartTotal: (req, res, next) => {
+
+    const dbInstance = req.app.get('db');
+
+    return dbInstance.getCartTotal(req.sessionID)
+    .then(response => res.status('200').json(response))
+    .catch(response => res.status('400'));
+    //gets cart total price
   }
 
 

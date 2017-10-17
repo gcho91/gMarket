@@ -45,7 +45,7 @@ app.get('/api/products/:id', ctrl.getProductById)
 app.post('/post', ctrl.addToCart)
 
 app.get('/cart', ctrl.getCartContent)
-
+app.get('/cartTotal', ctrl.getCartTotal)
 
 
 

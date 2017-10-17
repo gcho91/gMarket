@@ -13,14 +13,14 @@ angular.module('gMarket').service('cartService', function($http) {
     })
   };
 
-  // this.getCartWithInfo = function(){
-  //   return $http({
-  //     method: "GET",
-  //     url: "http://localhost:3000/cart"
-  //   }).then(function(response) {
-  //     console.log("response from cartSrv", response);
-  //     return response;
-  //   })
-  // };
+  this.getCartTotal = function(){
+    return $http({
+      method: "GET",
+      url: "http://localhost:3000/cartTotal"
+    }).then(function(response) {
+      console.log("response from cartSrv TOTAL PRICE", response);
+      return response;
+    })
+  };
 
 });

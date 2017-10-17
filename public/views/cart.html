@@ -4,12 +4,13 @@
 <!-- {{ test }} -->
 <!-- <div ng-repeat = "cart in shoppingcart"> -->
 
-<h1> {{ cart.name }}</h1>
+<!-- <h1> {{ cart.name }}</h1>
 <h1> {{ cart.quantity }}</h1>
-<h1> ${{ cart.price }}</h1>
+<h1> ${{ cart.price }}</h1> -->
 <!-- <p ng-src=" {{ cart.imageurl1 }}"></p> -->
 <!-- </div> -->
 
+<!--itemized shopping cart display here -->
  <table ng-repeat = "cart in shoppingcart" class="table table-hover">
   <tr>
     <th></th>
@@ -18,20 +19,22 @@
     <th>Price {{ cart.price }}</th>
   </tr>
 
-  <tr ng-repeat="item in items">
-    <td><img ng-src="{{item.image}}" width="100" height="100">
+  TOTAL OF CART: {{ cartTotal }}
+
+  <!-- <tr ng-repeat="item in items"> -->
+    <!-- <td><img ng-src="{{item.image}}" width="100" height="100"> -->
       <!-- <p><a ng-click="deleteItem(item.id)" class="btn btn-sm btn-danger" role="button">Remove Item</a></p> -->
-    </td>
-    <td>{{item.name}}</td>
-    <td>
-      1
-    </td>
-    <td>{{item.price | currency}} </td>
-  </tr>
-</table>
+    <!-- </td> -->
+    <!-- <td>{{item.name}}</td> -->
+    <!-- <td> -->
+      <!-- 1 -->
+    <!-- </td> -->
+    <!-- <td>{{item.price | currency}} </td> -->
+  <!-- </tr> -->
+<!-- </table> -->
 
 
 <div class="bottom-total">
-  <h3 class="total"><strong> Total: {{totalPrice | currency}}</strong></h3>
+  <h3 class="total"><strong> Total: ${{ cartTotal }}</strong></h3>
   <button href="#" class="btn btn-success btn-xs total-button" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"> Checkout</i></button>
 </div> -->

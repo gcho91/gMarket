@@ -5,10 +5,11 @@ angular.module('gMarket').controller('cartCtrl', function($scope, cartService){
   cartService.getCartContent().then(function(response) {
     console.log(response.data, "from cartctrl");
     $scope.shoppingcart = response.data;
+
   })
 
-  // cartService.getCartWithInfo().then(function(response) {
-  //   console.log(response.data);
-  //   $scope.cart = response.data
-  // })
+  cartService.getCartTotal().then(function(response) {
+    console.log("CartTotalData", response.data[0].sum);
+    $scope.cartTotal = response.data[0].sum
+  })
 })
