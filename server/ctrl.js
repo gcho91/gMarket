@@ -14,12 +14,12 @@ module.exports = {
     // .catch(()=>res.status("500").send());
   }
 
-//get products type=men or type=women
-  else if (req.query.type) {
-    return dbInstance.getProductsByType(req.query.type)
-    .then(products => res.status("200").send(products))
-  }
-},
+    //get products type=men or type=women
+    else if (req.query.type) {
+      return dbInstance.getProductsByType(req.query.type)
+      .then(products => res.status("200").send(products))
+    }
+  },
 
   //get products by id
 
@@ -32,6 +32,7 @@ module.exports = {
       .then(products => res.status("200").send(products))
     }
   },
+
 
   //post do db
   addToCart: (req, res, next) => {
@@ -48,7 +49,9 @@ module.exports = {
         if (response.length === 0) {
           //add to cart
           dbInstance.addToCart([req.body.productid, req.sessionID])
-          .then(response => res.status("200").json(response));
+          // .then(response => res.status("200").json(response);
+          .then(response => res.status("200").send(response))
+          .catch(response => res.status("400"));
         }
 
         else {
@@ -61,15 +64,22 @@ module.exports = {
       // .then(response => res.status("200").json(response));
     })
 
+  },
+
+  getCartContent: (req, res, next) => {
+
+    const dbInstance = req.app.get('db');
+
+    // dbInstance.run('SELECT * FROM cart').then(response => res.status("200").json(response));
+    return dbInstance.getCartContent(req.sessionID)
+    .then(response => res.status('200').json(response))
+    .catch(response => res.status('400'));
+
+    //get all cart items first regardless of sessionid
   }
 
 
 
-  // else if (req.query.type==="men") {
-  //   return dbInstance.getMenProducts()
-  //   .then(products=>res.status("200").send(products))
-  //   // .catch(()=>res.status("500").send());
-  // }
-  //
+
 
 }

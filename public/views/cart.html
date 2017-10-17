@@ -1,12 +1,21 @@
-<h1>Shopping cart here</h1>
+<h1>Your Shopping Cart</h1>
 
 
-<table class="table table-hover">
+<!-- {{ test }} -->
+<!-- <div ng-repeat = "cart in shoppingcart"> -->
+
+<h1> {{ cart.name }}</h1>
+<h1> {{ cart.quantity }}</h1>
+<h1> ${{ cart.price }}</h1>
+<!-- <p ng-src=" {{ cart.imageurl1 }}"></p> -->
+<!-- </div> -->
+
+ <table ng-repeat = "cart in shoppingcart" class="table table-hover">
   <tr>
     <th></th>
-    <th>Item</th>
-    <th>Quantity</th>
-    <th>Price</th>
+    <th>Item {{ cart.name }}</th>
+    <th>Quantity {{ cart.quantity }}</th>
+    <th>Price {{ cart.price }}</th>
   </tr>
 
   <tr ng-repeat="item in items">
@@ -25,4 +34,4 @@
 <div class="bottom-total">
   <h3 class="total"><strong> Total: {{totalPrice | currency}}</strong></h3>
   <button href="#" class="btn btn-success btn-xs total-button" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"> Checkout</i></button>
-</div>
+</div> -->
