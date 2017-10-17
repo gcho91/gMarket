@@ -17,9 +17,10 @@
     <th>Item {{ cart.name }}</th>
     <th>Quantity {{ cart.quantity }}</th>
     <th>Price {{ cart.price }}</th>
+    <th> <button ng-click= "deleteFromCart(cart.sessionid, cart.productid)">DELETE</buton></th>
   </tr>
 
-  TOTAL OF CART: {{ cartTotal }}
+  TOTAL OF CART: {{ cartTotal || 0 }}
 
   <!-- <tr ng-repeat="item in items"> -->
     <!-- <td><img ng-src="{{item.image}}" width="100" height="100"> -->

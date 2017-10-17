@@ -1,4 +1,4 @@
-SELECT SUM(products.price)
+SELECT SUM(products.price * cart.quantity)
 
 FROM cart
 

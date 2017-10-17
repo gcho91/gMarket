@@ -23,4 +23,14 @@ angular.module('gMarket').service('cartService', function($http) {
     })
   };
 
+  //!!!!!
+
+  this.deleteFromCart = function(sessionid, productid){
+    return $http.delete("/cart/delete/" + productid).then(function(response) {
+      console.log("response from cartsrv trying to delete,", response);
+      return response;
+    })
+  }
+  //!!!!
+
 });

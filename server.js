@@ -47,6 +47,8 @@ app.post('/post', ctrl.addToCart)
 app.get('/cart', ctrl.getCartContent)
 app.get('/cartTotal', ctrl.getCartTotal)
 
+app.delete('/cart/delete/:id', ctrl.deleteFromCart)
+
 
 
 
@@ -65,7 +67,7 @@ app.get('/test', function(req, res){
       req.session.page_views = 1;
       res.send("Welcome to this page for the first time!");
       // res.send(req.sessionID);
-      console.log("sessionID: ", req.sessionID);
+      // console.log("sessionID: ", req.sessionID);
       return ("sessionID: ", req.sessionID);
    }
 });

@@ -5,7 +5,7 @@ module.exports = {
   getProducts: (req, res, next) => {
 
     const dbInstance = req.app.get('db');
-    console.log(req.session)
+
 
     // if (!req.query.type) {
       if (!req.query.type){
@@ -41,10 +41,10 @@ module.exports = {
 
     // console.log(req.body, "FROM CTRLJS")
 
-    console.log("SESSION: ", req.sessionID )
+
 
     dbInstance.run('SELECT * FROM cart WHERE sessionid = $1 AND productid=$2', [req.sessionID, req.body.productid ]).then(function(response) {
-      console.log(response);
+
 
         if (response.length === 0) {
           //add to cart
@@ -83,11 +83,28 @@ module.exports = {
     const dbInstance = req.app.get('db');
 
     return dbInstance.getCartTotal(req.sessionID)
-    .then(response => res.status('200').json(response))
-    .catch(response => res.status('400'));
+    .then(response => res.status(200).json(response))
+    .catch(response => res.status(400));
     //gets cart total price
-  }
+  },
 
+
+//!!!!!!!
+  deleteFromCart: (req, res, next) => {
+
+    const dbInstance = req.app.get('db');
+    console.log(req.params.id)
+    return dbInstance.deleteItem([req.sessionID, req.params.id])
+
+    // .then(response => res.status(200).json(response))
+    .then( updatedCart => {
+      dbInstance.getCartTotal(req.sessionID)
+      .then(updatedTotal => res.status(200).json({updatedTotal, updatedCart }))
+      .catch(response => res.status(400));
+    })
+    .catch(response => res.status(400));
+  }
+//!!!!!!
 
 
 
