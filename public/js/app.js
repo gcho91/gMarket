@@ -40,4 +40,9 @@ angular.module('gMarket', ['ui.router']).config(function($stateProvider, $urlRou
     templateUrl: "views/checkout.html",
     controller: "checkoutCtrl"
   })
+
+  .state('confirmation', {
+    url: "/confirmation",
+    templateUrl: "views/confirmation.html"
+  })
 })

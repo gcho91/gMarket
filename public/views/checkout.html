@@ -1,28 +1,37 @@
 <h1>Here is checkout screen</h1>
 
-<form class = "order-form">
-  First Name: <br />
-  <input ng-model = "form.firstname" type="text" name = "firstname"><br />
-  Last Name: <br />
-  <input ng-model = "form.lastname" type="text" name = "lastname"><br />
-  Email: <br>
-  <input ng-model = "form.email" type="email" name = "email"><br />
+<div ng-hide="hideaftersubmit">
+  I hide when you hit submit
+  <form class = "order-form">
+    First Name: <br />
+    <input ng-model = "form.firstname" type="text" name = "firstname"><br />
+    Last Name: <br />
+    <input ng-model = "form.lastname" type="text" name = "lastname"><br />
+    Email: <br>
+    <input ng-model = "form.email" type="email" name = "email"><br />
 
-  <br /><br>
+    <br /><br>
 
-  Street 1: <br />
-  <input ng-model = "form.street1" type="text" name = "street1"><br />
-  Street 2: <br />
-  <input ng-model = "form.street2" type="text" name = "street2"><br />
-  City <br />
-  <input ng-model = "form.city" type="text" name = "city"><br />
-  State <br />
-  <!--drop down menu-->
-  <input ng-model = "form.state" type="text" name = "state"><br />
-  Zip Code: <br />
-  <input ng-model = "form.zip" type="text" name = "zip"><br />
+    Street 1: <br />
+    <input ng-model = "form.street1" type="text" name = "street1"><br />
+    Street 2: <br />
+    <input ng-model = "form.street2" type="text" name = "street2"><br />
+    City <br />
+    <input ng-model = "form.city" type="text" name = "city"><br />
+    State <br />
+    <!--drop down menu-->
+    <input ng-model = "form.state" type="text" name = "state"><br />
+    Zip Code: <br />
+    <input ng-model = "form.zip" type="text" name = "zip"><br />
 
- <input ng-click = "submitOrder(form, sessionid)" type="submit" value="Submit">
-</form>
+    <input ng-click = "submitOrder(form, sessionid)" type="submit" value="Submitttt" ng-hide="hideaftersubmit">
+
+
+  </form>
+
+
 
 <!--each input ng-model that creates an object -->
+</div>
+
+Show Form <input type="checkbox" ng-model="hideaftersubmit">
