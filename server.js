@@ -59,32 +59,18 @@ app.delete('/cart/delete/:id', ctrl.deleteFromCart)
 
 
 //something showed up//////////////////////////
-app.get('/test', function(req, res){
-   if(req.session.page_views){
-      req.session.page_views++;
-      res.send("You visited this page " + req.session.page_views + " times");
-   } else {
-      req.session.page_views = 1;
-      res.send("Welcome to this page for the first time!");
-      // res.send(req.sessionID);
-      // console.log("sessionID: ", req.sessionID);
-      return ("sessionID: ", req.sessionID);
-   }
-});
-
-// app.get('/test3', function(req, res, next) {
-//   // console.log(req.sessionID);
-//   res.send(req.sessionID)
-// })
-
-
-
-// app.use(function printSession(req, res, next) {
-//   console.log('req.session', req.session);
-//   return next();
+// app.get('/test', function(req, res){
+//    if(req.session.page_views){
+//       req.session.page_views++;
+//       res.send("You visited this page " + req.session.page_views + " times");
+//    } else {
+//       req.session.page_views = 1;
+//       res.send("Welcome to this page for the first time!");
+//       // res.send(req.sessionID);
+//       // console.log("sessionID: ", req.sessionID);
+//       return ("sessionID: ", req.sessionID);
+//    }
 // });
-
-
 
 
 
