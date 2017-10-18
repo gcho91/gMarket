@@ -1,5 +1,6 @@
 angular.module('gMarket', ['ui.router']).config(function($stateProvider, $urlRouterProvider) {
-  console.log("app.js");
+
+  $urlRouterProvider.otherwise("/")
   $stateProvider.state('home', {
     url: "/",
     templateUrl: "views/home.html",
@@ -35,22 +36,8 @@ angular.module('gMarket', ['ui.router']).config(function($stateProvider, $urlRou
   })
 
   .state('checkout', {
-    url: "/checkout",
+    url: "/checkout/:id",
     templateUrl: "views/checkout.html",
     controller: "checkoutCtrl"
   })
-
-  .state('test', {
-    url: "/test",
-    templateUrl: "views/test.html",
-    controller: "checkoutCtrl"
-
-  })
-
-
-
-  //diff ctrl, same states
-
-
-  $urlRouterProvider.otherwise("/")
 })

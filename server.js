@@ -48,6 +48,7 @@ app.get('/cart', ctrl.getCartContent)
 app.get('/cartTotal', ctrl.getCartTotal)
 
 app.delete('/cart/delete/:id', ctrl.deleteFromCart)
+app.post('/order', ctrl.submitOrder)
 
 
 

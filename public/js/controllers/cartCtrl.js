@@ -5,6 +5,7 @@ angular.module('gMarket').controller('cartCtrl', function($scope, cartService){
   cartService.getCartContent().then(function(response) {
     console.log(response.data, "from cartctrl");
     $scope.shoppingcart = response.data;
+    $scope.sessionid = response.data[0].sessionid
 
   })
 
@@ -23,5 +24,9 @@ angular.module('gMarket').controller('cartCtrl', function($scope, cartService){
      })
 
   }
+  //
+  // $scope.goToCheckout = function() {
+  //
+  // }
 
 })

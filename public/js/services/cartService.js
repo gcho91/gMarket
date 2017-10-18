@@ -33,4 +33,6 @@ angular.module('gMarket').service('cartService', function($http) {
   }
   //!!!!
 
+  // this.goToCheckout = function()
+
 });

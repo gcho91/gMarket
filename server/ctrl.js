@@ -107,10 +107,27 @@ module.exports = {
       .catch(response => res.status(400));
     })
     .catch(response => res.status(400));
-  }
+  },
+
+
 //!!!!!!
 
+  submitOrder: (req, res, next) => {
+      console.log("CTRL REQ.BODY: ", req.body);
+      const dbInstance = req.app.get('db');
 
+      const {sessionid, firstname, lastname, email, street1, street2, city, state, zip} = req.body;
+    // dbInstance.submitOrder([req.sessionID])
+      console.log("form info", sessionid, firstname, lastname, email, street1, street2, city, state, zip)
+    //call db sql to submit new entry
+    dbInstance.submitOrder([sessionid, firstname, lastname, email, street1, street2, city, state, zip])
+    .then(response => res.status(200).json(response))
+    .catch(err => {
+      console.log(err)
+    });
+//what is my response? updatedTotal???
+
+  }
 
 
 }

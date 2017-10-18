@@ -14,7 +14,7 @@
  <table ng-repeat = "cart in shoppingcart" class="table table-hover">
   <tr>
     <th></th>
-    <th>Item {{ cart.name }}</th>
+    <th>{{ cart.name }}</th>
     <th>Quantity {{ cart.quantity }}</th>
     <th>Price {{ cart.price }}</th>
     <th> <button ng-click= "deleteFromCart(cart.sessionid, cart.productid)">DELETE</buton></th>
@@ -32,10 +32,15 @@
     <!-- </td> -->
     <!-- <td>{{item.price | currency}} </td> -->
   <!-- </tr> -->
-<!-- </table> -->
+ </table>
+
+ <div class="checkout-button">
+   <h3 class="total"><strong> Total: ${{ cartTotal }}</strong></h3>
+   <button ui-sref="checkout({ id: sessionid })" class="btn btn-success"> Click to Checkout</button>
+ </div>
 
 
-<div class="bottom-total">
+<!-- <div class="bottom-total">
   <h3 class="total"><strong> Total: ${{ cartTotal }}</strong></h3>
   <button href="#" class="btn btn-success btn-xs total-button" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"> Checkout</i></button>
 </div> -->
