@@ -13,15 +13,80 @@
 
   <body ng-app="gMarket">
 
+
+    <img src="http://www.memoirsofa.com/wp-content/uploads/2016/09/Peach-Lily-Logo-1024x189.jpg" width="400px" alt="" class="logo">
+    <!-- <ul class="menu expanded" data-responsive-menu = "accordion medium-dropdown"> -->
+    <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
+
+    <!-- <ul class="vertical medium-horizontal menu expanded" data-responsive-menu="accordion medium-dropdown"> -->
+<!-- <ul class="vertical medium-horizontal menu" data-responsive-menu = "accordion medium-dropdown"> -->
+      <li><a ui-sref="home">Home</a></li>
+      <li><a ui-sref="shop">Shop</a></li>
+      <li><a ui-sref="shopbytype({type: 'men'})">Women</a></li>
+      <li><a ui-sref="shopbytype({type: 'women'})">Men</a></li>
+      <li><a ui-sref="cart">Cart</a></li>
+      <!-- <li><a ui-sref="checkout">Checkout Screen / remove</a></li> -->
+
+    </ul>
+
+    <div class="row">
+  <div class="columns">
+    <h3>Responsive Menu - Accordion Dropdown combo</h3>
+    <p>Same like drilldowns, an accordion menu works well on mobile, but on larger screens, you may want to convert that same menu into a dropdown. Here's an example for the same:</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="columns">
+    <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
+      <li>
+        <a href="#">Item 1</a>
+        <ul class="vertical menu">
+          <li>
+            <a href="#">Item 1A</a>
+            <ul class="vertical menu">
+              <li><a href="#">Item 1A</a></li>
+              <li><a href="#">Item 1B</a></li>
+              <li><a href="#">Item 1C</a></li>
+              <li><a href="#">Item 1D</a></li>
+              <li><a href="#">Item 1E</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Item 1B</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Item 2</a>
+        <ul class="vertical menu">
+          <li><a href="#">Item 2A</a></li>
+          <li><a href="#">Item 2B</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Item 3</a>
+        <ul class="vertical menu">
+          <li><a href="#">Item 3A</a></li>
+          <li><a href="#">Item 3B</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
 <!--using dummy menu dummy dummy -->
-<div class="menu">
+<!--<div class="menu">
      <ul>
          <li><a ui-sref="home">Home</a></li>
          <li><a ui-sref="shop"> SHOP ALL HERE </a></li>
           <li>by type</li>
          <li>
              <ul>
-               <!-- Where you pass in params/id for product type -->
+
+
+
                  <li><a ui-sref="shopbytype({type: 'men'})">Men</a></li>
                  <li><a ui-sref="shopbytype({type: 'women'})">Women</a></li>
              </ul>
@@ -29,7 +94,7 @@
          <li><a ui-sref="cart"> Shopping Cart </a></li>
          <li><a ui-sref="checkout"> Checkout screen //remove from home  </a></li>
      </ul>
- </div>
+ </div> -->
 
  <div class="view-container">
   <ui-view></ui-view>

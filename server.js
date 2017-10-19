@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const massive = require('massive');
 const cookieParser = require('cookie-parser');
-
 //db stuff
 const connectionString = "postgres://gcho91@localhost/gcho91";
 //ctrl for server
@@ -18,7 +17,6 @@ const massiveConnection = massive(connectionString)
 
 const app = express();
 const port = 3000;
-
 const db = app.get("db");
 
 
@@ -49,45 +47,6 @@ app.get('/cartTotal', ctrl.getCartTotal)
 
 app.delete('/cart/delete/:id', ctrl.deleteFromCart)
 app.post('/order', ctrl.submitOrder)
-
-
-
-
-
-
-
-///////////////////////////////////////////////////
-
-
-//something showed up//////////////////////////
-// app.get('/test', function(req, res){
-//    if(req.session.page_views){
-//       req.session.page_views++;
-//       res.send("You visited this page " + req.session.page_views + " times");
-//    } else {
-//       req.session.page_views = 1;
-//       res.send("Welcome to this page for the first time!");
-//       // res.send(req.sessionID);
-//       // console.log("sessionID: ", req.sessionID);
-//       return ("sessionID: ", req.sessionID);
-//    }
-// });
-
-
-
-//NOOOOOOOOOOOOO////////////////////////////////////////////////////////////
-
-// app.get('/spaghetti', function(req, res, next) {
-//   var sessData = req.session;
-//   sessData.someAttribute = "foo";
-//   sessData.fuckfuck = "spaghetti";
-//   res.send('Returning with some text');
-//   console.log(sessData);
-//   console.log(req.sessionID);
-//   // console.log(connect.sid);
-// });
-
-
 
 
 
