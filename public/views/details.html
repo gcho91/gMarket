@@ -1,13 +1,43 @@
 <h1>This is where I show prod details</h1>
 
-<div>
+
+<div class="grid-x">
+
+  <div class="large-6 small-12">
+    <img ng-src="{{ product.imageurl1}}" alt="">
+  </div>
+
+
+  <div class="large-6 small-12">
+    <h2>{{ product.name }}</h2>
+    <h4> <u>Description: </u></h4>
+    <p> {{ product.desc }}</p>
+    <h4> ${{ product.price }}</h4>
+
+      <button ng-click="addToCart(product)" class="button">Add to Cart</button>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div> -->
   <!-- {{ product }} -->
-  <img ng-src="{{ product.imageurl1 }}" width="500px" alt=""> <br />
+  <!-- <img ng-src="{{ product.imageurl1 }}" width="500px" alt=""> <br />
   <h4>{{ product.name }} </h4> <br />
   <h4> ${{ product.price }}</h4>
   <p> <u> Description</u></p>
   <p> {{ product.desc }}</p>
-
   <button ng-click="addToCart(product)">Add to Cart</button>
-
-</div>
+</div> -->
