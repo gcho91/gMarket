@@ -2,40 +2,124 @@
 <html >
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--DO NOT REMOVE META TAG OMG -->
     <title>G-Market</title>
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./css/foundation-6.4.2-complete/css/foundation.css">
+
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body ng-app="gMarket">
 
-<!--using dummy menu dummy dummy -->
-<div class="menu">
-     <ul>
-         <li><a ui-sref="home">Home</a></li>
-         <li><a ui-sref="shop"> SHOP ALL HERE </a></li>
-          <li>by type</li>
-         <li>
-             <ul>
-               <!-- Where you pass in params/id for product type -->
-                 <li><a ui-sref="shopbytype({type: 'men'})">Men</a></li>
-                 <li><a ui-sref="shopbytype({type: 'women'})">Women</a></li>
-             </ul>
-         </li>
-         <li><a ui-sref="cart"> Shopping Cart </a></li>
-         <li><a ui-sref="checkout"> Checkout screen //remove from home  </a></li>
-     </ul>
- </div>
+
+    <img ui-sref="home" src="http://www.memoirsofa.com/wp-content/uploads/2016/09/Peach-Lily-Logo-1024x189.jpg" width="400px" alt="" class="logo">
+    <!-- <ul class="menu expanded" data-responsive-menu = "accordion medium-dropdown"> -->
+    <ul class="vertical medium-horizontal expanded menu" data-responsive-menu="accordion medium-dropdown">
+
+
+      <li><a ui-sref="home">Home</a></li>
+      <li><a ui-sref="shop">Shop</a></li>
+      <li><a ui-sref="shopbytype({type: 'women'})">Women</a></li>
+      <li><a ui-sref="shopbytype({type: 'men'})">Men</a></li>
+      <li><a ui-sref="cart">Shopping Cart</a></li>
+      <!-- <li><a ui-sref="checkout">Checkout Screen / remove</a></li> -->
+
+    </ul>
+
+
+
+
+
+
+
 
  <div class="view-container">
   <ui-view></ui-view>
  </div>
 
+<hr>
+
+
+<div class="three-column-footer-contact-form-container">
+  <footer class="three-column-footer-contact-form" data-equalizer data-equalize-by-row="true">
+    <div class="footer-left" data-equalizer-watch>
+      <div class="baseline">
+        <div class="contact-details">
+          <h6>Contact details</h6>
+          <p><i class="fa fa-phone fa-lg" aria-hidden="true"></i> 01234 567890</p>
+          <p><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact us</a></p>
+          <p><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> Street, City, County, Country</p>
+        </div>
+        <div class="newsletter">
+          <div class="input-group">
+            <h6>Sign up for our newsletter</h6> <br>
+            <!-- <input class="input-group-field" type="email" placeholder="Email address"> -->
+          </div>
+          <a class="button expanded" href="#">Submit</a>
+        </div>
+      </div>
+     </div>
+    <div class="footer-center" data-equalizer-watch>
+      <div class="baseline">
+        <div class="newsletter">
+          <h6>Contact form</h6>
+          <div class="input-group">
+            <!-- <input class="input-group-field" type="text" placeholder="Name">
+            <input class="input-group-field" type="email" placeholder="Email address">
+            <textarea placeholder="Message"></textarea> -->
+          </div>
+          <a class="button expanded" href="#">Submit</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right" data-equalizer-watch>
+      <div class="baseline">
+        <img class="thumbnail" src="http://placehold.it/100">
+        <h6>Opening times</h6>
+        <p>Mon - Fri 9:00am - 5:00pm</p>
+        <p>Sat 9:00am - 8:00pm</p>
+        <p>Sun 9:00am - 4:00pm</p>
+        <div class="social">
+          <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--angular here -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+
+  <!--foundation js -->
+  <script src="./css/foundation-6.4.2-complete/js/vendor/jquery.js"></script>
+  <script src="./css/foundation-6.4.2-complete/js/vendor/what-input.js"></script>
+  <script src="./css/foundation-6.4.2-complete/js/vendor/foundation.js"></script>
+  <script src="./css/foundation-6.4.2-complete/js/app.js"></script>
+
+
+
 <!--script files -->
   <script src="./js/app.js"></script>
 <!--services -->

@@ -3,32 +3,75 @@
 <!-- {{ test }} <br> -->
 
 
-<!-- <div ng-repeat="product in products">
-
-  <h4> {{ product.name }}</h4> <br />
-  <h4> <a ui-sref="details({ id: product.productid })">{{ product.name }} </a></h4>
-
-  <h4> $ {{ product.price }}</h4> <br />
-  <h4> {{ product.prodtype }}</h4>
-  <img ng-src=" {{ product.imageurl1 }}" width="500px">
 
 
-  <hr>
+
+
+
+<!--bootstrap version below -->
+<!-- <div class="container">
+    <div class="row">
+        <div data-ng-repeat="product in products" class="col-md-4">
+            <img ng-src="{{ product.imageurl1 }}" alt="" class="img-responsive">
+            <p>{{product.name}}</p>
+        </div>
+    </div>
 </div> -->
+<!-- above was bootstrap vs -->
 
-
-<div ng-repeat="product in products" ui-sref="details({ id: product.productid })">
-
-
-  <img ng-src=" {{ product.imageurl1 }}" width="500px">
-  <h4>{{product.name}}</h4> <br />
-  <h4> ${{product.price}} </h4> <br />
-  <hr />
+<div class="grid-x">
+  <div class="small-12 medium-6 large-4 cell" ng-repeat="product in products" ui-sref="details({ id: product.productid })">
+    <img ng-src="{{product.imageurl1}}" alt="">
+    <h4> {{ product.name }}</h4>
+    <h4> ${{ product.price }}</h4>
+  </div>
 </div>
 
 
 
 
+<!-- <div class="grid-x">
+  <div class="cell">full width cell</div>
+  <div class="cell">full width cell</div>
+</div>
+<div class="grid-x">
+  <div class="small-6 cell">6 cells</div>
+  <div class="small-6 cell">6 cells</div>
+</div>
+<div class="grid-x">
+  <div class="medium-6 large-4 cell">12/6/4 cells</div>
+  <div class="medium-6 large-8 cell">12/6/8 cells</div>
+</div> -->
 
 
-<!-- {{ products }} -->
+
+
+<!-- <div ng-repeat = "product in products" ui-sref="details({ id: product.productid })">
+
+<div class="grid-x">
+  <div class="cell"> <img ng-src=" {{ product.imageurl1 }}" width="200px" alt=""> full width cell</div>
+  <div class="cell">full width cell</div>
+</div> -->
+
+<!-- <div class="grid-x">
+  <div class="small-6 cell">6 cells</div>
+  <div class="small-6 cell">6 cells</div>
+</div>
+<div class="grid-x">
+  <div class="medium-6 large-4 cell">12/6/4 cells</div>
+  <div class="medium-6 large-8 cell">12/6/8 cells</div>
+</div> -->
+<!-- </div> -->
+
+
+
+
+
+<!--
+<div class="row small-up-1 large-up-2" ng-repeat="product in products" ui-sref="details({ id: product.productid })">
+
+  <img ng-src=" {{ product.imageurl1 }}">
+  <h4>{{product.name}}</h4> <br />
+  <h4> ${{product.price}} </h4> <br />
+
+</div> -->
