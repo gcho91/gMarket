@@ -1,5 +1,7 @@
 body{
-  /*background-color: black;*/
+  /*background-color: salmon;*/
+  width: 80%;
+  margin: 0 auto;
 }
 
 .logo {

@@ -1,4 +1,4 @@
-<h1>Shop by type:</h1>
+<h1>Shop {{ gender }}</h1>
 
 <!-- <div ng-repeat="product in products">
 
@@ -10,14 +10,21 @@
 
   <hr />
 </div> -->
-{{ test }}
 
 
-<div ng-repeat="product in products" ui-sref="details({ id: product.productid })">
-
-
+<!--unstyled below -->
+<!-- <div ng-repeat="product in products" ui-sref="details({ id: product.productid })">
   <img ng-src=" {{ product.imageurl1 }}" width="500px">
   <h4>{{product.name}}</h4> <br />
   <h4> ${{product.price}} </h4> <br />
   <hr />
+</div> -->
+<!--unstyled above -->
+
+<div class="grid-x">
+  <div class="small-12 medium-6 large-4 cell" ng-repeat="product in products" ui-sref="details({ id: product.productid })">
+    <img ng-src="{{product.imageurl1}}" alt="">
+    <h4> {{ product.name }}</h4>
+    <h4> ${{ product.price }}</h4>
+  </div>
 </div>
