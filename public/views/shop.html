@@ -17,14 +17,29 @@
 </div> -->
 
 
-<div ng-repeat="product in products" ui-sref="details({ id: product.productid })">
+<!-- <div ng-repeat="product in products" ui-sref="details({ id: product.productid })">
 
 
   <img ng-src=" {{ product.imageurl1 }}" width="500px">
   <h4>{{product.name}}</h4> <br />
   <h4> ${{product.price}} </h4> <br />
-  <hr />
-</div>
+  <! <hr /> -->
+<!-- </div>  -->
+
+
+
+
+
+
+         <div class="container">
+             <div class="row">
+                 <div data-ng-repeat="product in products" class="col-md-4">
+                     <img ng-src="{{ product.imageurl1 }}" alt="" class="img-responsive">
+                     <p>{{product.name}}</p>
+                 </div>
+             </div>
+         </div>
+
 
 
 
