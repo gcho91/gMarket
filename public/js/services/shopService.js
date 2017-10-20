@@ -6,7 +6,7 @@ angular.module('gMarket').service('shopService', function($http){
   this.getProducts = function(){
     return $http({
       method: "GET",
-      url: "http://localhost:3000/api/products"
+      url: "/api/products"
     }).then(function(response) {
       console.log(response.data);
       var results = response.data;
@@ -18,7 +18,7 @@ angular.module('gMarket').service('shopService', function($http){
   this.getProductsByType = function (type){
     return $http({
       method: "GET",
-      url: `http://localhost:3000/api/products?type=`+ type
+      url: `/api/products?type=`+ type
     }).then(function(response) {
       // console.log(response.data);
       var results = response.data;
@@ -29,7 +29,7 @@ angular.module('gMarket').service('shopService', function($http){
   this.getProductById = function(id) {
     return $http({
       method: "GET",
-      url: `http://localhost:3000/api/products/` + id
+      url: `/api/products/` + id
     }).then(function(response) {
       console.log(response.data);
       var results = response.data;

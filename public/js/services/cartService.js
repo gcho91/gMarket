@@ -6,7 +6,7 @@ angular.module('gMarket').service('cartService', function($http) {
   this.getCartContent = function(){
     return $http({
       method: "GET",
-      url: "http://localhost:3000/cart"
+      url: "/cart"
     }).then(function(response) {
       console.log("response from cartSrv", response);
       return response;
@@ -16,7 +16,7 @@ angular.module('gMarket').service('cartService', function($http) {
   this.getCartTotal = function(){
     return $http({
       method: "GET",
-      url: "http://localhost:3000/cartTotal"
+      url: "/cartTotal"
     }).then(function(response) {
       console.log("response from cartSrv TOTAL PRICE", response);
       return response;
