@@ -30,9 +30,10 @@ angular.module('gMarket').service('cartService', function($http) {
       console.log("response from cartsrv trying to delete,", response);
       return response;
     })
-  }
+  };
   //!!!!
 
-  // this.goToCheckout = function()
+
+
 
 });

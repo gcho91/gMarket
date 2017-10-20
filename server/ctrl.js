@@ -47,7 +47,6 @@ module.exports = {
 
     dbInstance.run('SELECT * FROM cart WHERE sessionid = $1 AND productid=$2', [req.sessionID, req.body.productid ]).then(function(response) {
 
-
         if (response.length === 0) {
           //add to cart
           dbInstance.addToCart([req.body.productid, req.sessionID])
@@ -128,6 +127,8 @@ module.exports = {
 //what is my response? updatedTotal???
 
   }
+
+
 
 
 }

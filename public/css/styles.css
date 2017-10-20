@@ -2,12 +2,20 @@ body{
   /*background-color: salmon;*/
   /*width: 80%;*/
   margin: 0 auto;
+  font-family: "Lato", sans-serif;
+
 }
+
+a {
+  color: black;
+}
+
 
 
 .view-container {
   width: 80%;
   margin: 0 auto;
+
 }
 .logo {
   display: block;

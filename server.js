@@ -48,6 +48,9 @@ app.get('/cartTotal', ctrl.getCartTotal)
 app.delete('/cart/delete/:id', ctrl.deleteFromCart)
 app.post('/order', ctrl.submitOrder)
 
+// //testing update
+// app.put('/update', ctrl.updateCartQuantity)
+
 
 
 app.listen(port, () => {

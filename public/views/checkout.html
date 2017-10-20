@@ -20,8 +20,9 @@
     State <br />
     <!--drop down menu-->
     <input ng-model = "form.state" type="text" name = "state"><br />
-    Zip Code: <br />
+    Zip Code (5 digits): <br />
     <input ng-model = "form.zip" type="text" name = "zip"><br />
+    <!-- <input ng-model = "form.zip" type="text" placeholder= "Zip Code" pattern= "[0-9]{5}" /> -->
 
     <input ng-click = "submitOrder(form, sessionid)" type="submit" value="Submitttt" ng-hide="hideaftersubmit">
 

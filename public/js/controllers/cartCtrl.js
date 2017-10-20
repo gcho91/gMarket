@@ -24,9 +24,7 @@ angular.module('gMarket').controller('cartCtrl', function($scope, cartService){
      })
 
   }
-  //
-  // $scope.goToCheckout = function() {
-  //
-  // }
+
+
 
 })

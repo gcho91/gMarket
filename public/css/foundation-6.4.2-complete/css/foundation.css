@@ -446,7 +446,8 @@ body {
   margin: 0;
   padding: 0;
   background: #fefefe;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;*/
+    font-family: Lato, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
@@ -2227,7 +2228,9 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: Lato, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    /*font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;*/
+
   font-style: normal;
   font-weight: normal;
   color: inherit;
@@ -3505,6 +3508,7 @@ select {
       text-align: center; }
   .menu .is-active > a {
     background: #1779ba;
+    /*background: #FCEFEC*/
     color: #fefefe; }
   .menu .active > a {
     background: #1779ba;
