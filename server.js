@@ -4,7 +4,10 @@ const session = require('express-session');
 const massive = require('massive');
 const cookieParser = require('cookie-parser');
 //db stuff
-const connectionString = "postgres://gcho91@localhost/gcho91";
+// const connectionString = "postgres://gcho91@localhost/gcho91";
+
+const connectionString = "postgres://syucbyqoypxmod:836a46aec6d0261d1f913dc13c1b4d928c2c043a693232a3d60f1988e852792d@ec2-54-235-250-15.compute-1.amazonaws.com:5432/d72sol1imv8oao?ssl=true";
+
 //ctrl for server
 const ctrl = require('./server/ctrl.js')
 
