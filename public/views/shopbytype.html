@@ -22,8 +22,8 @@
 <!--unstyled above -->
 
 <div class="grid-x">
-  <div class="small-12 medium-6 large-4 cell" ng-repeat="product in products" ui-sref="details({ id: product.productid })">
-    <img ng-src="{{product.imageurl1}}" alt="">
+  <div class="prodgrid small-12 medium-6 large-4 cell" ng-repeat="product in products" ui-sref="details({ id: product.productid })">
+    <img class="prodimg" ng-src="{{product.imageurl1}}" alt="">
     <h4> {{ product.name }}</h4>
     <h4> ${{ product.price }}</h4>
   </div>
