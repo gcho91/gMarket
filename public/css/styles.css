@@ -1,15 +1,18 @@
 body{
-  /*background-color: salmon;*/
-  /*width: 80%;*/
   margin: 0 auto;
-  font-family: "Lato", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 
 }
 
 a {
   color: black;
+  /*background-color: salmon;*/
 }
 
+a.center {
+  display: flex;
+  justify-content: center;
+}
 
 
 .view-container {
@@ -28,4 +31,8 @@ a {
 
 .prodgrid {
   text-align: center;
+}
+
+.detailsimg {
+  padding: 20px 20px;
 }
