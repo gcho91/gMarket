@@ -35,6 +35,11 @@ a:hover {
   margin: 0 auto;
 }
 
+
+.menu {
+  padding-bottom: 40px;
+
+}
 .prodimg {
   padding: 10px 10px;
 }
@@ -51,6 +56,8 @@ a:hover {
 .detailsimg {
   padding: 20px 20px;
 }
+
+
 
 .button {
   background-color: #E7B2AA;
