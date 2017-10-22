@@ -3567,6 +3567,7 @@ select {
   vertical-align: middle;
   width: 20px;
   height: 16px;
+  /*height: 20px;*/
   cursor: pointer; }
   .menu-icon::after {
     position: absolute;

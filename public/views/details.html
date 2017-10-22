@@ -1,5 +1,4 @@
-<h1>This is where I show prod details</h1>
-
+<div class="prodpadding">
 
 <div class="grid-x">
 
@@ -11,13 +10,14 @@
   <div class="large-6 small-12">
     <h2>{{ product.name }}</h2>
     <h4> <u>Description: </u></h4>
-    <p> {{ product.desc }}</p>
+    <h5> {{ product.desc }}</h5>
     <h4> ${{ product.price }}</h4>
 
       <button ng-click="addToCart(product)" class="button">Add to Cart</button>
   </div>
 
 
+</div>
 </div>
 
 

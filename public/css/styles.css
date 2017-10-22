@@ -15,6 +15,16 @@ a.center {
 }
 
 
+
+a:hover {
+  color: #E7B2AA;
+}
+
+
+
+
+
+
 .view-container {
   width: 80%;
   margin: 0 auto;
@@ -29,10 +39,25 @@ a.center {
   padding: 10px 10px;
 }
 
+.prodpadding {
+  padding: 40px 0px 40px 0px ;
+}
+
+
 .prodgrid {
   text-align: center;
 }
 
 .detailsimg {
   padding: 20px 20px;
+}
+
+.button {
+  background-color: #E7B2AA;
+
+}
+
+.button:hover, .button:focus {
+  background-color: #2A2A2A;
+  color: #fefefe;
 }
