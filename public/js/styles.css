@@ -40,6 +40,12 @@ a:hover {
   padding-bottom: 40px;
 
 }
+
+/*.featured {
+  display: flex;
+  justify-content: center;
+}*/
+
 .prodimg {
   padding: 10px 10px;
 }

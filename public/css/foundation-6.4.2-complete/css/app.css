@@ -2,6 +2,11 @@
   width: 25%;
 }
 
+.featured {
+  display: flex;
+  justify-content: center;
+}
+
 #engadget-footer-sitemap-container {
   max-width: 100%;
   width: 100%;
