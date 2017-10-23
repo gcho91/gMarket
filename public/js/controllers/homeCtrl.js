@@ -6,4 +6,6 @@ angular.module('gMarket').controller('homeCtrl', function($scope, shopService){
     console.log($scope.homeproducts)
   })
 
+
+
 })
