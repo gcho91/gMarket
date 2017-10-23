@@ -23,7 +23,15 @@ a:hover {
 }
 
 
+.hover {
+    opacity: 1;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
 
+.hover:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
 
 
 
