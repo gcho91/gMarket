@@ -45,4 +45,11 @@ angular.module('gMarket', ['ui.router']).config(function($stateProvider, $urlRou
     url: "/confirmation",
     templateUrl: "views/confirmation.html"
   })
+
+  .state('about', {
+    url: "/about",
+    templateUrl: "views/about.html"
+  })
+
+
 })
