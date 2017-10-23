@@ -16,6 +16,8 @@ $scope.addToCart = function(product) {
 
   shopService.addToCart( product ).then(function(response) {
     console.log(response);
+    alert("You added an item to the cart! ")
+
   })
 }
 

@@ -2,6 +2,9 @@ angular.module('gMarket').controller('shopbytypeCtrl', function(shopService, $st
 
 $scope.test = "Mom's spaghetti";
 
+
+
+
 /*if ($stateParams.type === "men") {
   shopService.getMenProducts().then(results => {
     $scope.products = results;
@@ -25,5 +28,9 @@ if ($stateParams.type) {
 }
 
 $scope.gender = $stateParams.type;
+
+
+
+
 }
 )

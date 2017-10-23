@@ -1,5 +1,3 @@
-
-
 body{
   margin: 0 auto;
   font-family: "Josefin Sans", sans-serif;
@@ -69,4 +67,9 @@ a:hover {
 .button:hover, .button:focus {
   background-color: #2A2A2A;
   color: #fefefe;
+}
+
+
+.prod23 {
+  width: 50px;
 }
