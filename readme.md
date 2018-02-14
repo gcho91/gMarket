@@ -13,7 +13,7 @@ A minimalist e-commerce site built using SEAN stack (PostgreSQL, ExpressJS, Angu
 
 * **Gloria Cho** - [gcho91](https://www.github.com/gcho91)
 
-## Acknowledments
+## Acknowledgments
 
 * [Everlane](https://www.everlane.com) - all e-commerce products and their photos belong to Everlane. Please support their beautiful clothing and transparent business practices.
 
