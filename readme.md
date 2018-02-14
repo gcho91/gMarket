@@ -4,10 +4,10 @@ A minimalist e-commerce site built using SEAN stack (PostgreSQL, ExpressJS, Angu
 
 ## Built With
 
-* [PostgreSQL] (https://www.postgresql.org/)
-* [ExpresJS] (https://expressjs.com/)
-* [AngularJS] (https://angularjs.org/)
-* [NodeJS] (https://nodejs.org/en/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [ExpresJS](https://expressjs.com/)
+* [AngularJS](https://angularjs.org/)
+* [NodeJS](https://nodejs.org/en/)
 
 ## Author
 
